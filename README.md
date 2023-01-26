@@ -77,3 +77,17 @@ The LightningModule defines a system and not a model. Here a system groups all t
 - Optimizers (`configure_optimizers`)
 
 One can thus build a dataset agnostic model that can be easily shared. Let's build a system for Cifar-10 classification.
+
+##  Train and Evaluate
+
+Now that we have organized our data pipeline using `DataModule` and model architecture+training loop using `LightningModule`, the PyTorch Lightning `Trainer` automates everything else for us. 
+
+The Trainer automates:
+- Epoch and batch iteration
+- Calling of `optimizer.step()`, `backward`, `zero_grad()`
+- Calling of `.eval()`, enabling/disabling grads
+- Saving and loading weights
+- Weights and Biases logging
+- Multi-GPU training support
+- TPU support
+- 16-bit training support
