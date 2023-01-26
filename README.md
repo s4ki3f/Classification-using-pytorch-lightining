@@ -58,3 +58,11 @@ It organizes the data pipeline into one shareable and reusable class. A datamodu
 Learn more about datamodules [here](https://pytorch-lightning.readthedocs.io/en/stable/extensions/datamodules.html). Let's build a datamodule for the Cifar-10 dataset. 
 
 # Dataset used here is Cifar-10
+
+##  Callbacks
+
+A callback is a self-contained program that can be reused across projects. PyTorch Lightning comes with few [built-in callbacks](https://pytorch-lightning.readthedocs.io/en/latest/extensions/callbacks.html#built-in-callbacks) which are regularly used. 
+
+### Built-in Callbacks
+
+In this notebook, we will use [Early Stopping](https://pytorch-lightning.readthedocs.io/en/latest/api/pytorch_lightning.callbacks.EarlyStopping.html#pytorch_lightning.callbacks.EarlyStopping) and [Model Checkpoint](https://pytorch-lightning.readthedocs.io/en/latest/api/pytorch_lightning.callbacks.ModelCheckpoint.html#pytorch_lightning.callbacks.ModelCheckpoint) built-in callbacks. They can be passed to the `Trainer`.
