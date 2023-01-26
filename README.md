@@ -66,3 +66,14 @@ A callback is a self-contained program that can be reused across projects. PyTor
 ### Built-in Callbacks
 
 In this notebook, we will use [Early Stopping](https://pytorch-lightning.readthedocs.io/en/latest/api/pytorch_lightning.callbacks.EarlyStopping.html#pytorch_lightning.callbacks.EarlyStopping) and [Model Checkpoint](https://pytorch-lightning.readthedocs.io/en/latest/api/pytorch_lightning.callbacks.ModelCheckpoint.html#pytorch_lightning.callbacks.ModelCheckpoint) built-in callbacks. They can be passed to the `Trainer`.
+
+##  LightningModule - Define the System
+
+The LightningModule defines a system and not a model. Here a system groups all the research code into a single class to make it self-contained. `LightningModule` organizes your PyTorch code into 5 sections:
+- Computations (`__init__`).
+- Train loop (`training_step`)
+- Validation loop (`validation_step`)
+- Test loop (`test_step`)
+- Optimizers (`configure_optimizers`)
+
+One can thus build a dataset agnostic model that can be easily shared. Let's build a system for Cifar-10 classification.
